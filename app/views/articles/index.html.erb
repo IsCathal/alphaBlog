@@ -13,8 +13,7 @@
       <tr>
         <td><%= article.title %></td>
         <td><%=article.description %></td>
-        <td><%=article.id %></td>
-      </tr>
+<td><%= button_to 'Delete', article_path(article), method: :delete %></td>  
       <% end %>
     </tbody>
   </thead>
