@@ -1,7 +1,9 @@
 <h1>Showing article details</h1>
 
 <p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Auhtor: </strong><%= @article.user.username %></p>
+<p><strong>Author: </strong><%= @article.user.username %></p>
+<%= link_to gravator_for(@article.user), user_path(@article.user) %> 
+
 
 <p><strong>Description: </strong><%= @article.description %></p>
 
