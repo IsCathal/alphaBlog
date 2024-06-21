@@ -11,7 +11,6 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome to the Alpha Blog, you have successfully Signed Up! #{@user.username}"
       redirect_to articles_path
    else
-    byebug
     render 'new'
    end
 

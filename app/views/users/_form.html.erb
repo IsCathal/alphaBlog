@@ -9,7 +9,6 @@
   <% end %>
 
 
-
 <%= form_with(model: @user,local: true, data: { turbo: false } ) do |f| %>
 
 <p> 
@@ -29,7 +28,7 @@
 </p>
 
 <p>
-  <%= f.submit %>
+  <%= f.submit "Sign Up" %>
 </p>
 
 <% end %>
