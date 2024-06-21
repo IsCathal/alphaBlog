@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+  <h1><%= @user.username %>'s profile</h1>
+</div>
+<div style="text-align: center;">
+  <%= gravator_for @user, size: 200 %>
+</div>
+<div style="text-align: center;">
+  <h1><%= @user.username %>'sarticles</h1>
+</div>
+
+<%= render 'articles/article' %>
+
+
+<%= link_to 'Return to articles listing', articles_path %> 
