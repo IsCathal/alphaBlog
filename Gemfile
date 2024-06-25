@@ -41,6 +41,18 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+
+gem 'will_paginate', '~> 4.0'
+# The sassc-rails gem is a replacement for the older sass-rails gem, providing a more
+# performant and modern Sass to CSS transpiler using the SassC library, which is
+# based on libsass. This gem integrates SassC with the Rails asset pipeline, allowing
+# you to write stylesheets in Sass and automatically compile them to CSS during asset
+# precompilation and server startup. It is designed to improve the speed of compiling
+# Sass files, especially for large projects with many stylesheets.
+gem 'sassc-rails', '~> 2.1'
+
+
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
