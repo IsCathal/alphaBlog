@@ -15,13 +15,12 @@ class SessionsController < ApplicationController
       flash.now[:alert] = "There was something wrong with your login details"
       
       render 'new'
-      byebug
+      
     end
 
   end
 
   def destroy
-    byebug
     session[:user_id] = nil
     flash[:notice] = "Logged Out"
     redirect_to root_path

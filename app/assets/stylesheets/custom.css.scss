@@ -29,3 +29,64 @@
     margin-right: 1em; }
   .flickr_pagination .next_page {
     margin-left: 1em; }
+
+
+    /* nav bar */
+    /* Custom CSS for the Navigation Bar */
+.navbar {
+  background-color: #343a40; /* Dark background color */
+}
+
+.navbar-brand {
+  color: #ffffff; /* White text color for brand */
+  font-weight: bold;
+  &:hover {
+    color: #d3d3d3; /* Light grey on hover */
+  }
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* White text color for links */
+  &:hover {
+    color: #d3d3d3; /* Light grey on hover */
+  }
+  &.active {
+    color: #ffc107; /* Gold color for active link */
+  }
+}
+
+/* Custom CSS for Other Common Elements */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #343a40; /* Dark color for headings */
+}
+
+.container {
+  padding-top: 20px;
+}
+
+/* Custom Button Styles */
+.btn-custom {
+  background-color: #343a40; /* Dark background */
+  color: #ffffff; /* White text */
+  border: none;
+  &:hover {
+    background-color: #495057; /* Slightly lighter dark background on hover */
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
