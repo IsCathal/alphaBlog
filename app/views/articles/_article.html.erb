@@ -22,6 +22,8 @@
     </tbody>
   </thead>
 </table>
-<p>
-  <%= link_to 'Create new artile', new_article_path %>
-</p>
+<% if logged_in? %>
+  <p>
+   <%= link_to 'Create new artile', new_article_path %>
+  </p>
+  <% end %>
