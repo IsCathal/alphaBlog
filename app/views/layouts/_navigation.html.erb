@@ -18,6 +18,10 @@
         <%= link_to 'Articles', articles_path, class: 'nav-link' %>
       </li>
       <% if logged_in? %>
+       <% if current_user&.admin? %>
+       <div class="nav-link">This user is Admin</div>
+      <% end %>
+
          <li class="nav-item">
            <%= link_to current_user.username, user_path(current_user), class: 'nav-link' %>
       </li>
