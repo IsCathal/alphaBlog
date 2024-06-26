@@ -4,10 +4,11 @@
 <div style="text-align: center;">
   <%= gravator_for @user, size: 200 %>
 </div>
-
-<div style="text-align: center;">
-  <%= link_to "Edit your profile", edit_user_path(@user) %>
-</div>
+<% if logged_in? && @user == current_user %>
+  <div style="text-align: center;">
+      <%= link_to "Edit your profile", edit_user_path(@user) %>
+  </div>
+  <% end %>
 
 <div style="text-align: center;">
   <h1><%= @user.username %>articles</h1>

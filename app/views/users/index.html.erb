@@ -22,7 +22,9 @@
         <td><%= link_to gravator_for(user), user %></td>
         <td><%= pluralize(user.articles.count, "article") %></td>
         <td><%= link_to "View Profile", user  %></td>
-        <td><%= link_to "Edit Profile", edit_user_path(user)  %></td>
+         <% if logged_in? && @user == current_user %>
+           <td><%= link_to "Edit Profile", edit_user_path(user)  %></td>
+         <% end %>
         <td><%= time_ago_in_words(user.created_at)  %></td>
 
 
