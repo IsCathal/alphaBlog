@@ -8,9 +8,9 @@
       <th>User</th>
       <th>Profile</th>
       <th>Article Count</th>
-      <th colspan = "3">Link To Profile</th>
-      <th colspan = "5">Edit Profile</th>
-      <th colspan = "5">Created Profile</th>
+      <th>Link To Profile</th>
+      <th>Edit Profile</th>
+      <th>Created Profile</th>
 
 
     </tr>
@@ -22,9 +22,10 @@
         <td><%= link_to gravator_for(user), user %></td>
         <td><%= pluralize(user.articles.count, "article") %></td>
         <td><%= link_to "View Profile", user  %></td>
-         <% if logged_in? && @user == current_user %>
-           <td><%= link_to "Edit Profile", edit_user_path(user)  %></td>
+        <td> <% if logged_in? && @user == current_user %>
+           <%= link_to "Edit Profile", edit_user_path(user)  %>
          <% end %>
+         </td>
         <td><%= time_ago_in_words(user.created_at)  %></td>
 
 
