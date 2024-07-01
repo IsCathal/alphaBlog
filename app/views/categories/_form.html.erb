@@ -1,23 +1,19 @@
 <% if @category.errors.any? %>
-  <h2>You got an error </h2>
+  <h2>You got an error</h2>
   <ul>
     <% @category.errors.full_messages.each do |msg| %>
-     <li><%= msg %></li>
-
+      <li><%= msg %></li>
     <% end %>
   </ul>
-  <% end %>
+<% end %>
 
-<%= form_with(model: @category,local: true, data: { turbo: false } ) do |f| %>
+<%= form_with(model: @category, local: true, data: { turbo: false }) do |f| %>
+  <p>
+    <%= f.label :name, "Category" %><br/>
+    <%= f.text_field :name %>
+  </p>
 
-<p> 
-  <%= f.label :name, "Category" %><br/>
-  <%= f.text_field :name %>
-</p>
-
-
-<p>
-  <%= f.submit %>
-</p>
-
+  <p>
+    <%= f.submit %>
+  </p>
 <% end %>
