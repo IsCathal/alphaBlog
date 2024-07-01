@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def show
     @category = Category.find(params[:id])
   end
@@ -9,7 +8,6 @@ class CategoriesController < ApplicationController
   end
 
   def create
-
     @category = Category.new(category_params)
     if @category.save
       flash[:notice] = "Category was successfully created"
@@ -28,5 +26,4 @@ class CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:name)
   end
-
 end
