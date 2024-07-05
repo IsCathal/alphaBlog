@@ -3,8 +3,7 @@ before_action :require_admin, except: [:index, :show]
 
   def show
     @category = Category.find(params[:id])
-    @admin_user = User.create(username: "johngoe", email: "jhnedoe@example.com", 
-                                          password: "password", admin: true)
+    
   end
 
   def new
