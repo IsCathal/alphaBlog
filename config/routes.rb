@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'hello_world', to: 'hello_world#index'
   get 'pages/home'
   root 'pages#home'
   get 'about', to: 'pages#about'

@@ -1,0 +1,4 @@
+# Procfile for development using HMR
+rails: bundle exec rails s -p 3000
+wp-client: bin/shakapacker-dev-server
+wp-server: bin/shakapacker --watch
