@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 const Article = (props) => {
   return (
     <React.Fragment>
-      Title: {props.title}
-      Description: {props.description}
+      Title: {this.props.title}
+      Description: {this.props.description}
     </React.Fragment>
   )
 }

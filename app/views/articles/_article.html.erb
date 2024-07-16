@@ -1,35 +1,31 @@
-<table class = "table" > 
-
-<div> 
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
       <th>Author</th>
-      <th>Descriptions</th>
-      <th colspan = "3">Actions</th>
+      <th>Description</th>
+      <th colspan="3">Actions</th>
     </tr>
-
-    <tbody>
-      <% @articles.each do |article|%>
-     
-      <td>  <%= react_component("Article", {title: article.title, description: article.description}) %></td>
-
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= react_component("Article", { title: article.title, description: article.description }) %></td>
         <td><%= article.title %></td>
         <td><%= link_to article.user.username, users_path(article.user) %></td>
-        <td><%=article.description %></td>
+        <td><%= article.description %></td>
         <td><%= link_to 'View', article_path(article) %></td>
-        <% if logged_in? && (article.user == current_user || current_user.admin? )  %>
-         <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= button_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?"}  %></td> 
-          <% end %>
-      <% end %>
-    </tbody>
-  </thead>
-</div>
-
+        <% if logged_in? && (article.user == current_user || current_user.admin?) %>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= button_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
 <% if logged_in? %>
   <p>
-   <%= link_to 'Create new artile', new_article_path %>
+    <%= link_to 'Create new article', new_article_path %>
   </p>
-  <% end %>
+<% end %>
