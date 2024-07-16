@@ -80,3 +80,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem "shakapacker", "~> 8.0"
