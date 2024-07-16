@@ -1,4 +1,6 @@
 <table class = "table" > 
+
+<div> 
   <thead>
     <tr>
       <th>Title</th>
@@ -9,7 +11,9 @@
 
     <tbody>
       <% @articles.each do |article|%>
-      <tr>
+     
+      <td>  <%= react_component("Article", {title: article.title, description: article.description}) %></td>
+
         <td><%= article.title %></td>
         <td><%= link_to article.user.username, users_path(article.user) %></td>
         <td><%=article.description %></td>
@@ -21,6 +25,8 @@
       <% end %>
     </tbody>
   </thead>
+</div>
+
 </table>
 <% if logged_in? %>
   <p>
