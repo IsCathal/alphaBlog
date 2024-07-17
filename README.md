@@ -42,3 +42,8 @@ Copy code
 rails server
 Access the application
 Open your web browser and navigate to http://localhost:3000 to see the application running.
+
+To run React + RubyonRails 
+bundle install
+yarn install
+foreman start -f Procfile.dev
